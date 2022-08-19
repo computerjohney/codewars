@@ -14,15 +14,15 @@ const assert = chai.assert;
 
 const funcs = require("./Snail.js");
 let snail = funcs.snail;
-// let actual = twoSum([1, 2, 3], 4);
-// console.log(actual);
+
 // snail = function(array) {
 
 describe("Tests", () => {
   it("test", () => {
-    Test.assertDeepEquals(snail([[]]), []);
-    Test.assertDeepEquals(snail([[1]]), [1]);
-    Test.assertDeepEquals(
+    //Test.assertDeepEquals(snail([[]]), []);
+    assert.deepEqual(snail([[]]), []);
+    assert.deepEqual(snail([[1]]), [1]);
+    assert.deepEqual(
       snail([
         [1, 2, 3],
         [4, 5, 6],
@@ -30,7 +30,7 @@ describe("Tests", () => {
       ]),
       [1, 2, 3, 6, 9, 8, 7, 4, 5]
     );
-    Test.assertDeepEquals(
+    assert.deepEqual(
       snail([
         [1, 2, 3, 4, 5],
         [6, 7, 8, 9, 10],
@@ -43,7 +43,7 @@ describe("Tests", () => {
         19, 18, 17, 12, 13,
       ]
     );
-    Test.assertDeepEquals(
+    assert.deepEqual(
       snail([
         [1, 2, 3, 4, 5, 6],
         [20, 21, 22, 23, 24, 7],
